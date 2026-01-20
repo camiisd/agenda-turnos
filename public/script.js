@@ -64,9 +64,7 @@ document.getElementById('createAppointmentBtn').addEventListener('click', async 
 // LOAD APPOINTMENTS
 async function loadAppointments() {
   const res = await fetch(`${API_URL}/appointment`, {
-    headers: {
-      'Authorization': `Bearer ${token}`
-    }
+    headers: { 'Authorization': `Bearer ${token}` }
   });
 
   const data = await res.json();

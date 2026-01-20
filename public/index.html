@@ -2,44 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agenda de Turnos</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Agenda de Turnos</h1>
+  <h1>Bienvenido a la Agenda de Turnos</h1>
 
-  <!-- BIENVENIDA -->
   <section id="welcome">
-    <h2>Bienvenid@</h2>
-    <p>¿Qué deseas hacer?</p>
-    <button onclick="showRegister()">Registrarme</button>
+    <button onclick="showRegister()">Registrarse</button>
     <button onclick="showLogin()">Iniciar sesión</button>
   </section>
 
-  <!-- AUTENTICACIÓN -->
   <section id="auth" class="hidden">
     <div id="registerSection" class="hidden">
       <h2>Registro</h2>
-      <input type="email" id="registerEmail" placeholder="Email" />
-      <input type="password" id="registerPassword" placeholder="Password" />
+      <input type="email" id="registerEmail" placeholder="Email">
+      <input type="password" id="registerPassword" placeholder="Password">
       <button id="registerBtn">Registrarse</button>
     </div>
-
     <div id="loginSection" class="hidden">
       <h2>Login</h2>
-      <input type="email" id="loginEmail" placeholder="Email" />
-      <input type="password" id="loginPassword" placeholder="Password" />
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
       <button id="loginBtn">Login</button>
     </div>
   </section>
 
-  <!-- TURNOS -->
   <section id="appointments" class="hidden">
     <h2>Nuevo Turno</h2>
-    <input type="date" id="date" />
-    <input type="time" id="time" />
-    <input type="text" id="client" placeholder="Cliente" />
+    <input type="date" id="date">
+    <input type="time" id="time">
+    <input type="text" id="client" placeholder="Cliente">
     <button id="createAppointmentBtn">Crear turno</button>
 
     <h2>Turnos</h2>
@@ -48,6 +40,7 @@
 
   <p id="message"></p>
 
+  <script src="script.js"></script>
   <script>
     function showRegister() {
       document.getElementById('welcome').classList.add('hidden');
@@ -63,7 +56,5 @@
       document.getElementById('registerSection').classList.add('hidden');
     }
   </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
