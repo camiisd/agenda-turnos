@@ -35,17 +35,6 @@ const createAppointment = (req, res) => {
     //Luego, leemos la base de datos
     const appointments = readAppointment()
 
-    // Verificar turno duplicado
-    const conflict = appointments.find(
-        a => a.date === result.data.date && a.time === result.data.time
-    );
-
-    if (conflict) {
-        return res.status(409).json({
-            error: 'Ya existe un turno para esa fecha y hora.'
-        });
-    }
-
     //Creamos un objeto nuevo
     const newAppointment = {
         id: Date.now(),
