@@ -16,19 +16,20 @@ function normalizeText(text) {
 //POST para crear nuevos usuarios
 const registerUser = async (req, res) => {
     //Desestructuramos los datos que ingresan en el cuerpo de la solicitud
-    const { email, password } = req.body
+    let { email, password } = req.body
 
-    // Normalizamos el email (case insensitive)
-    email = normalizeText(email);
-
+    
     //Verificamos que los campos no estén vacíos
     if (!email || !password) {
         return res.status(400).json ({ error: 'No se completaron los campos requeridos.'})
     }
 
+    // Normalizamos el email (case insensitive)
+    email = normalizeText(email);
+
     //Leemos la BD para verificar si el usuario existe
     const database = readUser();
-    const userExists = database.find((user) => user.mail === email);
+    const userExists = database.find((user) => user.email === email);
     if (userExists) {
         return res.status(400).json({ error: "El correo electrónico ya está registrado."})
     }
@@ -51,15 +52,15 @@ const registerUser = async (req, res) => {
 //POST para iniciar sesión
 const loginUser = async(req, res) => {
      //Desestructuramos los datos que ingresan en el cuerpo de la solicitud
-     const { email, password } = req.body
+     let { email, password } = req.body
 
-     // Normalizamos el email (case insensitive)
-    email = normalizeText(email);
-
-     //Verificamos que los campos no estén vacíos
+         //Verificamos que los campos no estén vacíos
     if (!email || !password) {
         return res.status(400).json ({ error: 'No se completaron los campos requeridos.'})
     }
+
+     // Normalizamos el email (case insensitive)
+    email = normalizeText(email);
 
     //Leemos la BD para verificar si el usuario existe
     const database = readUser();

@@ -3,5 +3,15 @@
     "id": 1768846559112,
     "email": "liccamilasoto@gmail.com",
     "password": "$2b$10$biW8QGGKYRsmhp3J4uCywelbtu4dGdFjDcJwcg2cwwswbzEpHn3HG"
+  },
+  {
+    "id": 1769009374829,
+    "email": "camilasoto@gmail.com",
+    "password": "$2b$10$wJpYAs3v9c6GSSDPtckd9O9d8jb6XyUGzVSdXTjjn9icYSBeQjzsW"
+  },
+  {
+    "id": 1769009890098,
+    "email": "gonzalo@gmail.com",
+    "password": "$2b$10$Ch15nNWyyMozJmOpaGRRF.g6VImp7b2Fwr5Eeb7OFiTU2vHvyyRMu"
   }
 ]
