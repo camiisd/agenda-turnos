@@ -99,6 +99,15 @@ Authorization: Bearer <token>
 
 ---
 
+## 📑 Documentación en Postman
+
+La API cuenta con una colección documentada en **Postman**, donde se pueden probar todos los endpoints, flujos de autenticación y rutas protegidas:
+
+🔗 **Postman Collection:**
+https://liccamilasoto-8350666.postman.co/workspace/Camila-Soto's-Workspace~dd762bdd-6c15-4d98-818b-e20d88634a51/collection/50946390-0197f16d-4eb4-4d9b-90b4-70a59050bf49?action=share&creator=50946390
+
+---
+
 ## 🧪 Ejemplos de Solicitudes
 
 ### ➕ Registro de Usuario
