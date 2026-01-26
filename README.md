@@ -99,6 +99,70 @@ Authorization: Bearer <token>
 
 ---
 
+## 🧪 Ejemplos de Solicitudes
+
+### ➕ Registro de Usuario
+
+**Endpoint:** `POST /api/users/register`
+
+**Headers:**
+```http
+Content-Type: application/json
+```
+
+**Body (JSON):**
+```json
+{
+  "email": "usuario@email.com",
+  "password": "123456"
+}
+```
+
+**Respuesta exitosa:**
+```json
+{
+  "message": "Usuario registrado con éxito."
+}
+```
+
+---
+
+### ➕ Crear un Turno
+
+> Requiere autenticación JWT
+
+**Endpoint:** `POST /api/appointment/`
+
+**Headers:**
+```http
+Content-Type: application/json
+Authorization: Bearer <token>
+```
+
+**Body (JSON):**
+```json
+{
+  "date": "2026-02-15",
+  "time": "14:30",
+  "client": "Juan Pérez"
+}
+```
+
+**Respuesta exitosa:**
+```json
+{
+  "message": "Turno creado con éxito.",
+  "newAppointment": {
+    "id": 1700000000000,
+    "date": "2026-02-15",
+    "time": "14:30",
+    "client": "Juan Pérez"
+  }
+}
+```
+
+---
+
 ## 📁 Estructura del Proyecto
 
 ```appointment-api/
